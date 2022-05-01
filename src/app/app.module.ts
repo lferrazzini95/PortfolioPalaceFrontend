@@ -6,16 +6,24 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ImgButtonComponent } from './components/img-button/img-button.component';
 import { LineChartNgxComponent } from './components/line-chart-ngx/line-chart-ngx.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { NgxEchartsModule } from 'ngx-echarts';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CompanyInfoBoxComponent } from './components/company-info-box/company-info-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ImgButtonComponent,
-    LineChartNgxComponent
+    LineChartNgxComponent,
+    CompanyInfoBoxComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,14 @@ import { HttpClientModule } from '@angular/common/http';
        */
       echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
     }),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatMomentDateModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

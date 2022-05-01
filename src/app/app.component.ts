@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PortfolioPalaceFrontend';
+  ticker = "";
+  companyInfo : any;
+
+  receiveTicker($event: any) {
+    this.ticker = $event;
+  }
+
+  updateInfoBox($event : any){
+    console.log("Receving Event at Root" + JSON.stringify($event));
+    this.companyInfo = $event;
+  }
+
 }

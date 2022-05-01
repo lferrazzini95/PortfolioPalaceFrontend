@@ -1,11 +1,16 @@
-<app-header titleImage="assets/titleImage.png" class="portfolioPalaceHeader"></app-header>
+<app-header titleImage="assets/PortfolioPalaceIcon.png" class="portfolioPalaceHeader" (tickerEvent)="receiveTicker($event)"></app-header>
 <div class="dashboardContainer">
   <div class="dashboardRow">
+      <app-line-chart-ngx [ticker]="ticker" (companyInfoEvent)="updateInfoBox($event)"></app-line-chart-ngx>
+  <div class="dashboardRow">
+      <app-company-info-box [companyInfo]="companyInfo"></app-company-info-box>
+  </div>
+  <div class="dashboardRow">
     <div class="dashboardColumn">
-      <app-line-chart-ngx></app-line-chart-ngx>
+     
     </div>
     <div class="dashboardColumn">
-      <app-line-chart-ngx></app-line-chart-ngx>
+    
     </div>
   </div>
 </div>

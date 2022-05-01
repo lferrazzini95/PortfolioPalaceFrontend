@@ -1,0 +1,33 @@
+.dateSelector{
+    width: 30%;
+    height: auto;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: #EE9B00 !important;
+   }
+
+::ng-deep.mat-form-field-underline {
+/*change color of underline*/
+background-color: #EE9B00 !important;
+} 
+
+::ng-deep.mat-form-field-ripple {
+/*change color of underline when focused*/
+background-color: #EE9B00 !important;;
+}
+
+::ng-deep .mat-form-field-label {
+/*change color of label*/
+color: #EE9B00 !important;
+}
+
+
+mat-datepicker-toggle {
+color: #EE9B00 !important;
+}
+
+input{
+    color: #EE9B00;
+}

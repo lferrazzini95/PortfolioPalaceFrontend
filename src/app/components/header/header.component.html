@@ -1,3 +1,5 @@
 <img class="titleImage" src={{titleImage}}>
 <h1 class="titleText">Portfolio Palace</h1>
 <app-img-button class="headerMenuBtn" img_source="assets/menu.png"></app-img-button>
+<input class="tickerSearchBar" value="{{this.ticker}}" (keyup.enter)="sendTicker($event)">
+

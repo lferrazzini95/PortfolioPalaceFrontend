@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() titleImage : string = '';
+  @Output() tickerEvent = new EventEmitter<string>();
+  @Input() ticker : any;
+
   constructor() { }
+
+  sendTicker($event: any) {
+    this.ticker = $event.target.value;
+    this.tickerEvent.emit(this.ticker);
+  }
 
   ngOnInit(): void {
   }

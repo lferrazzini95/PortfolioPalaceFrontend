@@ -1,1 +1,12 @@
-<div echarts [options]="chartOption" class="demo-chart"></div>
+<div class="chartContainer">
+    <mat-form-field class="dateSelector" appearance="fill">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="range">
+          <input matStartDate [(ngModel)]="startDate" placeholder="Start date">
+          <input matEndDate [(ngModel)]="endDate" placeholder="End date" (dateChange)="updateData()">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="range"></mat-datepicker-toggle>
+        <mat-date-range-picker #range></mat-date-range-picker>
+      </mat-form-field>
+    <div echarts [options]="chartOption" class="demo-chart"></div>
+</div>
